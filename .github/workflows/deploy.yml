@@ -25,7 +25,7 @@ jobs:
 
       # Sets up Node\.js in the environment
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: "latest"
 
