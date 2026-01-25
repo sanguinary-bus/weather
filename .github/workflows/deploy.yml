@@ -25,12 +25,12 @@ jobs:
 
       # Sets up Node\.js in the environment
       - name: Set up Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: "latest"
 
       - name: Cache node_modules 📦
-        uses: actions/cache@v3
+        uses: actions/cache@v5
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -43,8 +43,14 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy 🚀
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          deploy_key: ${{ secrets.GH_TOKEN }}
-          publish_dir: ./dist
+      # Deploys the built project to the gh\-pages branch
+      - name: Deploy to GitHub Pages
+        run: |
+          cd dist
+          git config --global user.email "${{ secrets.EMAIL }}"
+          git config --global user.name "${{ github.actor }}"
+          git init
+          git add -A
+          git commit -m 'Automated deployment'
+          git push -f https://${{ github.actor }}:${{ secrets.GH_TOKEN }}@github.com/${{ github.repository }}.git master:gh-pages
+        shell: bash
