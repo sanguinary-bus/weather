@@ -1,0 +1,23 @@
+@import 'tailwindcss';
+
+@import 'tailwindcss-primeui';
+
+@import 'primeicons/primeicons.css';
+
+.debug {
+  @apply border border-red-500;
+}
+
+.link {
+  @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}

@@ -1,0 +1,72 @@
+{
+  "locations": [
+    {
+      "id": "31.73.05.1006",
+      "provinsi": "DKI Jakarta",
+      "kotkab": "Kota Adm. Jakarta Barat",
+      "kecamatan": "Kebon Jeruk",
+      "desa": "Kedoya Utara",
+      "lon": 106.76098829987599,
+      "lat": -6.16857000417099,
+      "timezone": "Asia/Jakarta",
+      "enabled": true,
+      "order": 1
+    },
+    {
+      "id": "31.74.02.1003",
+      "provinsi": "DKI Jakarta",
+      "kotkab": "Kota Adm. Jakarta Selatan",
+      "kecamatan": "Setiabudi",
+      "desa": "Karet Kuningan",
+      "lon": 106.82797024590636,
+      "lat": -6.220603629362727,
+      "timezone": "Asia/Jakarta",
+      "enabled": true,
+      "order": 2
+    },
+    {
+      "id": "36.03.05.2017",
+      "provinsi": "Banten",
+      "kotkab": "Tangerang",
+      "kecamatan": "Cisoka",
+      "desa": "Jeungjing",
+      "lon": 106.44495599788837,
+      "lat": -6.274105926271908,
+      "timezone": "Asia/Jakarta",
+      "enabled": true,
+      "order": 3
+    },
+    {
+      "id": "32.16.05.2007",
+      "provinsi": "Jawa Barat",
+      "kotkab": "Bekasi",
+      "kecamatan": "Tambun Utara",
+      "desa": "Srimahi",
+      "lon": 107.08195463032364,
+      "lat": -6.176480564747611,
+      "timezone": "Asia/Jakarta",
+      "enabled": true,
+      "order": 4
+    },
+    {
+      "id": "36.03.17.1006",
+      "provinsi": "Banten",
+      "kotkab": "Tangerang",
+      "kecamatan": "Curug",
+      "desa": "Binong",
+      "lon": 106.58462928539647,
+      "lat": -6.238031024852207,
+      "timezone": "Asia/Jakarta",
+      "enabled": true,
+      "order": 5
+    }
+  ],
+  "settings": {
+    "maxEnabled": 10,
+    "refreshInterval": 15,
+    "temperatureUnit": "celsius",
+    "windSpeedUnit": "kmh",
+    "language": "en",
+    "timeFormat": "24h"
+  }
+}

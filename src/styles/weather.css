@@ -1,0 +1,101 @@
+:root {
+  --p-primary-color: #10b981;
+  --p-primary-contrast-color: #ffffff;
+  --p-primary-hover-bg: #059669;
+  --p-primary-active-bg: #047857;
+
+  --p-surface-0: #ffffff;
+  --p-surface-50: #f9fafb;
+  --p-surface-100: #f3f4f6;
+  --p-surface-200: #e5e7eb;
+  --p-surface-300: #d1d5db;
+
+  --p-text-color: #111827;
+  --p-text-gray-200-color: #6b7280;
+
+  --font-family:
+    -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--p-surface-50);
+  color: var(--p-text-color);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Custom scrollbar - using standard CSS for webkit scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--p-surface-100);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--p-surface-300);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--p-surface-400);
+}
+
+/* Loading animation with Tailwind */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.loading-state .pi-spinner {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Error state styling */
+.error-state {
+  color: var(--red-600);
+}
+
+/* Weather card transitions - using standard CSS */
+.weather-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.weather-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive grid adjustments with Tailwind */
+@media (max-width: 768px) {
+  .weather-grid {
+    @apply grid-cols-[repeat(auto-fill,minmax(300px,1fr))];
+  }
+}
+
+@media (max-width: 480px) {
+  .weather-grid {
+    @apply grid-cols-1;
+  }
+}
+
+/* Compact design improvements with Tailwind */
+.compact {
+  --card-padding: 0.75rem;
+}
+
+.compact .card-content {
+  padding: var(--card-padding);
+}
