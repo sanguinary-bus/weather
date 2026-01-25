@@ -51,7 +51,7 @@
       </div>
     </header>
 
-    <main class="flex-1 max-w-300 w-full mx-auto my-0 p-8">
+    <main class="flex-1 max-w-300 w-full mx-auto my-0 p-4">
       <!-- Weather Grid -->
       <WeatherGrid />
 
