@@ -16,7 +16,6 @@ declare module 'vue' {
     Dropdown: typeof import('primevue/dropdown')['default']
     GridHeader: typeof import('./src/components/weather/GridHeader.vue')['default']
     LocationManager: typeof import('./src/components/weather/LocationManager.vue')['default']
-    Message: typeof import('primevue/message')['default']
     PWABadge: typeof import('./src/components/PWABadge.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

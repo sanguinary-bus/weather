@@ -24,6 +24,11 @@ This file contains development guidelines and commands for agentic coding assist
 - For single file testing, consider adding Vitest: `npm install -D vitest @vue/test-utils`
 - Potential test command pattern: `npm test path/to/file.test.ts`
 
+### PWA Commands
+
+- **Predeploy**: `npm run predeploy` - Build for deployment
+- **Deploy**: `npm run deploy` - Deploy to GitHub Pages
+
 ## Code Style Guidelines
 
 ### Import Sorting
@@ -52,6 +57,7 @@ This file contains development guidelines and commands for agentic coding assist
 - **Multi-word component names**: Disabled (single-word components allowed)
 - **Props**: Use proper TypeScript typing, no runtime prop validation needed
 - **Emits**: Use TypeScript `defineEmits<...>()` for type safety
+- **Auto-imports**: PrimeVue components auto-imported via unplugin-vue-components
 
 ### File Naming
 
@@ -121,3 +127,18 @@ try {
 - **API keys**: Currently embedded in service files (should be environment variables)
 - **XSS protection**: Vue's built-in template escaping
 - **CORS**: Handled by BMKG API, no local proxy needed
+
+### PWA Configuration
+
+- **Service Worker**: Workbox with caching strategies for static resources and images
+- **Manifest**: Configured for GitHub Pages deployment (`/weather/` base path)
+- **Offline Support**: StaleWhileRevalidate for scripts/styles, CacheFirst for images
+- **Dev Mode**: PWA features enabled in development via devOptions
+
+### Development Environment
+
+- **Base Path**: `/weather/` for GitHub Pages deployment
+- **Port**: 3000 for both dev server and preview
+- **Source Maps**: Enabled in development, disabled in production
+- **Bundle Obfuscation**: Enabled in production with thread pool optimization
+- **Auto Import**: PrimeVue components resolved automatically
