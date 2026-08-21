@@ -21,7 +21,7 @@
     "@tailwindcss/vite": "^4.3.3",
     "@tanstack/vue-query": "^5.101.4",
     "@vueuse/core": "^14.4.0",
-    "dayjs": "^1.11.22",
+    "dayjs": "^1.11.23",
     "pinia": "^4.0.3",
     "primeicons": "^8.0.0",
     "primevue": "^5.0.1",
