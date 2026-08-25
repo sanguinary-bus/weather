@@ -55,7 +55,7 @@
     "vite-plugin-bundle-obfuscator": "^1.13.0",
     "vite-plugin-pwa": "^1.3.0",
     "vite-plugin-vue-devtools": "^8.2.1",
-    "vue-tsc": "^3.3.10",
+    "vue-tsc": "^3.3.11",
     "workbox-window": "^7.4.1"
   },
   "overrides": {
